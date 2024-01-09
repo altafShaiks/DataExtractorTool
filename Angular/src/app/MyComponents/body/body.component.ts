@@ -116,12 +116,20 @@ export class BodyComponent implements OnInit {
 
   isCheckedAll: boolean = false;
   toggleAllCheckboxes() {
-    for (const user of this.users) {
-      user.isChecked = this.isCheckedAll;
-      if (this.checkboxEntry.has(user))
+
+    // Verifying whether any checkbox is checked from before
+    if (this.checkboxEntry.size == this.users.length) {
+      for (const user of this.users) {
+        user.isChecked = this.isCheckedAll;
         this.checkboxEntry.delete(user);
-      else
-        this.checkboxEntry.add(user);
+      }
+    }
+    else {
+      for (const user of this.users) {
+        user.isChecked = this.isCheckedAll;
+        if (!this.checkboxEntry.has(user))
+          this.checkboxEntry.add(user);
+      }
     }
   }
 
