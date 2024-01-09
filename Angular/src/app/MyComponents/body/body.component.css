@@ -1,0 +1,113 @@
+.page-search-pagination {
+    display: inline-block;
+}
+
+.search-bar {
+    width: 100dvh;
+    padding: 10px 26px 50px;
+}
+
+.serach {
+    float: left;
+}
+
+.pagination {
+    float: right;
+}
+
+.user-not-found {
+    text-align: center;
+}
+
+.user-details-table {
+    background-color: #fff;
+    height: 90vh;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+
+.add-user-icon {
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.add-user-icon:hover {
+    cursor: pointer;
+    color: green;
+}
+
+.delete-all-user-icon {
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.delete-all-user-icon:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.checkbox-arrows {
+    padding-left: 20px;
+}
+
+hr {
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+.all-entry {
+    font-size: 20px;
+}
+
+.user-details-heading {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+.user-data {
+    padding: 12px 0;
+}
+
+.user-data:hover {
+    cursor: pointer;
+}
+
+.checkbox-column {
+    padding: 12px 0 12px 20px;
+}
+
+
+.update-user-icon, .delete-user-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.single-entry:hover {
+    background-color: aliceblue;
+    
+}
+
+.selected-entry {
+    background-color: aliceblue;
+}
+
+.delete-user-icon:hover {
+    color: red;
+}
+
+.update-user-icon:hover {
+    color: green;
+}
+
+.single-entry:hover .delete-user-icon {
+    display: block;
+}
+
+.single-entry:hover .update-user-icon {
+    display: block;
+}

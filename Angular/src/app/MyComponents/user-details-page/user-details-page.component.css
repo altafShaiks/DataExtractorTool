@@ -1,0 +1,33 @@
+
+.back-arrow {
+    font-size: 1.3rem;
+    margin-top: 120px;
+}
+
+.back-arrow:hover {
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 10%;
+}
+
+.heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-outer-layer {
+    padding: 20px 15px;
+}
+
+.user-id {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.user-details {
+    margin-top: auto;
+    margin-bottom: auto;
+}

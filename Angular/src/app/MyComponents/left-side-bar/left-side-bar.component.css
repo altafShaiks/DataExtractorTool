@@ -1,0 +1,21 @@
+.side-bar {
+    background-color: aliceblue;
+    height: 100vh;
+    overflow: auto;
+}
+
+.add-user-btn {
+    background-color: aliceblue;
+    width: 100%;
+    text-align: start;
+}
+
+.user-icon {
+    margin-right: 10px;
+}
+
+.add-user-btn:hover {
+    background-color: #17a2b8!important;
+    color: #fff;
+}
+

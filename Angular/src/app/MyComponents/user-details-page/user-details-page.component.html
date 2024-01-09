@@ -1,0 +1,26 @@
+<div class="back-arrow">
+    <fa-icon [icon]="faCircleArrowLeft" (click)="goBackToHomePage()"></fa-icon>
+</div>
+
+<div class="container">
+    <h2 class="heading">Here you can able find overall information of the user!</h2>
+    <div class="card mb-3 card-outer-layer" *ngFor="let user of userInformation">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img [attr.src]="getGender()['src']" class="img-fluid rounded-start" alt="profile-img">
+            </div>
+            <div class="col-md-8 user-details">
+                <div class="card-body">
+                    <h1 class="card-title user-id">#{{user.user_id}}</h1>
+                    <h3 class="card-text">First Name: <strong>{{user.first_name}}</strong></h3>
+                    <h3 class="card-text">Last Name: <strong>{{user.last_name}}</strong></h3>
+                    <h3 class="card-text">DOB (Date of Birth): <strong>{{user.dob}}</strong></h3>
+                    <h3 class="card-text">Gender: <strong>{{user.gender}}</strong></h3>
+                    <h3 class="card-text">Country: <strong>{{user.country}}</strong></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
