@@ -22,8 +22,11 @@
         <div class="checkbox-arrows">
             <input type="checkbox" class="page-head" id="head-checkbox" [(ngModel)]="isCheckedAll"
                 (change)="toggleAllCheckboxes()">
-            <fa-icon class="add-user-icon" [icon]="faSquarePlus" data-bs-toggle="modal"
-                data-bs-target="#addUserModal"></fa-icon>
+            <fa-icon class="add-user-icon" [icon]="faSquarePlus" [ngClass]="{'disabled': isAddUserIconDisabled}"
+                [attr.data-bs-toggle]="isAddUserIconDisabled ? null : 'modal'"
+                [attr.data-bs-target]="isAddUserIconDisabled ? null : '#addUserModal'">
+            </fa-icon>
+
             <fa-icon class="delete-all-user-icon" [icon]="faTrash"
                 [attr.data-bs-toggle]="getBsToggle()['data-bs-toggle']"
                 [attr.data-bs-target]="getBsTarget()['data-bs-target']" (click)="setUserToDelete('')"></fa-icon>
@@ -53,12 +56,12 @@
                                         <div class="col-6">
                                             <fa-icon class="update-user-icon" [attr.id]="user.user_id" [icon]="faPen"
                                                 (click)="patchValue(user.user_id)" data-bs-toggle="modal"
-                                                data-bs-target="#updateUserModal"></fa-icon>
+                                                data-bs-target="#updateUserModal" [ngClass]="{'disabled': isAddUserIconDisabled}"></fa-icon>
                                         </div>
                                         <div class="col-6">
                                             <fa-icon class="delete-user-icon" [icon]="faTrash"
                                                 (click)="setUserToDelete(user)" data-bs-toggle="modal"
-                                                data-bs-target="#confirmDeleteUserModal"></fa-icon>
+                                                data-bs-target="#confirmDeleteUserModal" [ngClass]="{'disabled': isAddUserIconDisabled}"></fa-icon>
                                         </div>
 
                                     </div>

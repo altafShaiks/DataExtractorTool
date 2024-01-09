@@ -25,6 +25,9 @@ export class BodyComponent implements OnInit {
 
   public dataOfUsers: any;
   users: UserDataInterface[] | any = [];
+  singlePageUsers: UserDataInterface[] | any = [];
+
+  public isAddUserIconDisabled: boolean = false;
 
   userToDelete: any;
 
@@ -38,7 +41,8 @@ export class BodyComponent implements OnInit {
 
   getPaginatedUsers(): any[] {
     const startIndex = this.currentPage * this.pageSize;
-    return this.users.slice(startIndex, startIndex + this.pageSize);
+    this.singlePageUsers = this.users.slice(startIndex, startIndex + this.pageSize);
+    return this.singlePageUsers;
   }
 
   handlePageEvent(pageEvent: PageEvent) {
@@ -101,7 +105,6 @@ export class BodyComponent implements OnInit {
   }
 
 
-
   // For Check boxes
   public checkboxEntry: any = new Set('');
 
@@ -116,20 +119,23 @@ export class BodyComponent implements OnInit {
 
   isCheckedAll: boolean = false;
   toggleAllCheckboxes() {
+    // Enable or Disable other buttons than delete all
+    this.isAddUserIconDisabled = !this.isAddUserIconDisabled;
 
     // Verifying whether any checkbox is checked from before
-    if (this.checkboxEntry.size == this.users.length) {
-      for (const user of this.users) {
+    if (this.checkboxEntry.size == this.singlePageUsers.length) {
+      for (const user of this.singlePageUsers) {
         user.isChecked = this.isCheckedAll;
         this.checkboxEntry.delete(user);
       }
     }
     else {
-      for (const user of this.users) {
+      for (const user of this.singlePageUsers) {
         user.isChecked = this.isCheckedAll;
         if (!this.checkboxEntry.has(user))
           this.checkboxEntry.add(user);
       }
+
     }
   }
 
