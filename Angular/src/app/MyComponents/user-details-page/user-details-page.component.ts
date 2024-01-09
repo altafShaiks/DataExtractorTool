@@ -28,7 +28,6 @@ export class UserDetailsPageComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.userData.getUserById(id).subscribe((result:any) => {
       this.userInformation = result.userDetails;
-      console.warn(this.userInformation);
     });
   }
 
