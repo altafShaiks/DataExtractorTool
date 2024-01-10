@@ -1,0 +1,29 @@
+[33mcommit 0e9d99ac3b369065312108201f9b320fa01a7491[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Altaf <altaf.shaik@planonsoftware.com>
+Date:   Tue Jan 9 15:19:02 2024 +0530
+
+    README file is created
+
+[33mcommit cc58165730fd71eb098e89444bea6bd3707334e4[m
+Author: Altaf <altaf.shaik@planonsoftware.com>
+Date:   Tue Jan 9 13:49:17 2024 +0530
+
+    Sigle page select all users and disable other buttons while all checkboxes is selected
+
+[33mcommit 4defc7c3279f0725268268cb701f05dc8c274918[m
+Author: Altaf <altaf.shaik@planonsoftware.com>
+Date:   Tue Jan 9 13:13:33 2024 +0530
+
+    Wrote a logic for all checkbox select (toggle)
+
+[33mcommit ec81d5f8700259b097d8db41b35bb3afa5822314[m
+Author: Altaf <altaf.shaik@planonsoftware.com>
+Date:   Tue Jan 9 10:36:31 2024 +0530
+
+    Removed print statement which was getting triggered when user clicks an entry
+
+[33mcommit eb5895e86478ab8d5763d1ecf1bb2f2d13acdca2[m
+Author: Altaf <altaf.shaik@planonsoftware.com>
+Date:   Tue Jan 9 10:00:23 2024 +0530
+
+    First upload on Git
