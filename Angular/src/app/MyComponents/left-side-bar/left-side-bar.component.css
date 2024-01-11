@@ -1,10 +1,15 @@
-.side-bar {
+.side-bar, .body-white-background {
     background-color: aliceblue;
     height: 100vh;
     overflow: auto;
 }
 
+<<<<<<< Updated upstream
 .dummy-button {
+=======
+
+.add-user-btn {
+>>>>>>> Stashed changes
     background-color: aliceblue;
     width: 100%;
     text-align: center;

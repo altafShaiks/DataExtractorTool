@@ -12,13 +12,13 @@
     </form>
 </div>
 <div class="page-search-pagination pagination">
-    <mat-paginator [length]="users.length" [pageSize]="pageSize" [showFirstLastButtons]="true"
-        [pageSizeOptions]="[15, 20, 25]" [pageIndex]="currentPage" (page)="handlePageEvent($event)" >
+    <mat-paginator class="paginator-background" [length]="users.length" [pageSize]="pageSize" [showFirstLastButtons]="true"
+        [pageSizeOptions]="[15, 20, 25]" [pageIndex]="currentPage" (page)="handlePageEvent($event)">
     </mat-paginator>
 </div>
 
-<div class="container-fluid">
-    <div class="user-details-table">
+<div class="container-fluid b">
+    <div class="user-details-table body-white-box">
         <div class="checkbox-arrows">
             <input type="checkbox" class="page-head" id="head-checkbox" [(ngModel)]="isCheckedAll"
                 (change)="toggleAllCheckboxes()">
