@@ -6,12 +6,14 @@ import { Router } from '@angular/router'
 import { UserDataInterface } from '../Interfaces/user-data-interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { end } from '@popperjs/core';
-import { PageEvent } from '@angular/material/paginator';
+import { MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
+import { CustomPaginatorIntl } from '../Custom-Paginator--Intl/custom-paginator-intl'; // Import your custom paginator
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrl: './body.component.css',
+  styleUrls: ['./body.component.css'],
+  providers: [{ provide: MatPaginatorIntl, useClass: CustomPaginatorIntl }]
 })
 
 
