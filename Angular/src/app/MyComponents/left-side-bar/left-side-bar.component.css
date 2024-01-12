@@ -4,19 +4,10 @@
     overflow: auto;
 }
 
-<<<<<<< Updated upstream
 .dummy-button {
-=======
-
-.add-user-btn {
->>>>>>> Stashed changes
     background-color: aliceblue;
     width: 100%;
     text-align: center;
-}
-
-.user-icon {
-    margin-right: 10px;
 }
 
 .dummy-button:hover {
