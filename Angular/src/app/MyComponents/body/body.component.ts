@@ -140,6 +140,15 @@ export class BodyComponent implements OnInit {
 
     }
   }
+  
+
+  uncheckHeadCheckbox() {
+    // uncheck head checkbox now
+    this.isCheckedAll = false;
+
+    // Enable buttons like add, edit, remove single
+    this.isAddUserIconDisabled = false;
+  }
 
 
   // Add user
@@ -252,6 +261,9 @@ export class BodyComponent implements OnInit {
     else if (this.checkboxEntry.size > 1) {
       this.openSnackBar('Deleted Multiple User Successfully', 'okay');
     }
+
+    this.uncheckHeadCheckbox();
+
     this.checkboxEntry.clear();
     this.anyCheckboxSelected = false;
     this.fetchData();
