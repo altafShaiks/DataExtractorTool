@@ -21,6 +21,11 @@ import { UserDetailsPageComponent } from './MyComponents/user-details-page/user-
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { SearchBarComponent } from './MyComponents/search-bar/search-bar.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -29,7 +34,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AppComponent,
     LeftSideBarComponent,
     BodyComponent,
-    UserDetailsPageComponent
+    UserDetailsPageComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule
   ],
   providers: [
     provideClientHydration()

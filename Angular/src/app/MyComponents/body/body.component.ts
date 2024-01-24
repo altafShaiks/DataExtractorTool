@@ -83,6 +83,11 @@ export class BodyComponent implements OnInit {
   // Search Bar
   searchValue = '';
 
+  getSearchId(event: any): void {
+    this.searchValue = event;
+    this.fetchData();
+  }
+
   fetchData(): void {
     if (this.searchValue == '') {
       this.usersData.getAllUsers().subscribe((usersFetched: any) => {

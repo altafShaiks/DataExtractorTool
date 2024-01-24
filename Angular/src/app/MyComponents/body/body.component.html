@@ -1,15 +1,7 @@
-<div class="page-search-pagination search">
-    <form [formGroup]="searchForm" class="serachBar">
-        <div class="input-group search-bar">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id=""><fa-icon class="user-icon"
-                        [icon]="faMagnifyingGlass"></fa-icon></span>
-            </div>
 
-            <input type="text" class="searchBarInput form-control" placeholder="Search user by Id"
-                formControlName="searchValue" (ngModelChange)="onSearchSubmit()">
-        </div>
-    </form>
+
+<div class="page-search-pagination search-bar">
+    <app-search-bar (searchValue)="getSearchId($event)"></app-search-bar>
 </div>
 <div class="page-search-pagination pagination">
     <mat-paginator class="paginator-background" [length]="users.length" [pageSize]="pageSize" [showFirstLastButtons]="true"
