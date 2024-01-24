@@ -1,0 +1,10 @@
+<mat-form-field class="search-bar" appearance="outline">
+    
+    <input matInput type="text" [(ngModel)]="value" (ngModelChange)="getSearchValue()" placeholder="Search user by ID">
+    <span matIconPrefix> <mat-icon>search</mat-icon> &nbsp;</span>
+    @if (value) {
+      <button matSuffix mat-icon-button aria-label="Clear" (click)="clearSearchBar()">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </mat-form-field>
