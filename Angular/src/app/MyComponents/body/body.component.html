@@ -1,13 +1,15 @@
+    <div class="page-search-pagination search-bar">
+        <app-search-bar (searchValue)="getSearchId($event)"></app-search-bar>
+    </div>
+    <div class="page-search-pagination pagination">
+        <!-- <mat-paginator [] class="paginator-background" [length]="users.length" [pageSize]="pageSize" [showFirstLastButtons]="true"
+        [pageSizeOptions]="[15, 20, 25]" [pageIndex]="currentPage">
+    </mat-paginator> -->
 
-
-<div class="page-search-pagination search-bar">
-    <app-search-bar (searchValue)="getSearchId($event)"></app-search-bar>
-</div>
-<div class="page-search-pagination pagination">
-    <mat-paginator class="paginator-background" [length]="users.length" [pageSize]="pageSize" [showFirstLastButtons]="true"
-        [pageSizeOptions]="[15, 20, 25]" [pageIndex]="currentPage" (page)="handlePageEvent($event)">
-    </mat-paginator>
-</div>
+        <app-paginator [users]="users" [pageSize]="pageSize" [currentPage]="currentPage" (pageSizeUpdated)="onPageSizeUpdated($event)" (currentPageUpdated)="onCurrentPageUpdated($event)"
+            >
+        </app-paginator>
+    </div>
 
 <div class="container-fluid b">
     <div class="user-details-table body-white-box">
@@ -48,12 +50,14 @@
                                         <div class="col-6">
                                             <fa-icon class="update-user-icon" [attr.id]="user.user_id" [icon]="faPen"
                                                 (click)="patchValue(user.user_id)" data-bs-toggle="modal"
-                                                data-bs-target="#updateUserModal" [ngClass]="{'disabled': isAddUserIconDisabled}"></fa-icon>
+                                                data-bs-target="#updateUserModal"
+                                                [ngClass]="{'disabled': isAddUserIconDisabled}"></fa-icon>
                                         </div>
                                         <div class="col-6">
                                             <fa-icon class="delete-user-icon" [icon]="faTrash"
                                                 (click)="setUserToDelete(user)" data-bs-toggle="modal"
-                                                data-bs-target="#confirmDeleteUserModal" [ngClass]="{'disabled': isAddUserIconDisabled}"></fa-icon>
+                                                data-bs-target="#confirmDeleteUserModal"
+                                                [ngClass]="{'disabled': isAddUserIconDisabled}"></fa-icon>
                                         </div>
 
                                     </div>

@@ -7,7 +7,8 @@ import { UserDataInterface } from '../Interfaces/user-data-interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { end } from '@popperjs/core';
 import { MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
-import { CustomPaginatorIntl } from '../Custom-Paginator--Intl/custom-paginator-intl'; // Import your custom paginator
+import { CustomPaginatorIntl } from '../Custom-Paginator--Intl/custom-paginator-intl';
+
 
 @Component({
   selector: 'app-body',
@@ -47,9 +48,12 @@ export class BodyComponent implements OnInit {
     return this.singlePageUsers;
   }
 
-  handlePageEvent(pageEvent: PageEvent) {
-    this.pageSize = pageEvent.pageSize;
-    this.currentPage = pageEvent.pageIndex;
+  onPageSizeUpdated(value: number) {
+    this.pageSize = value
+  }
+
+  onCurrentPageUpdated(value: number) {
+    this.currentPage = value;
   }
 
 
@@ -58,10 +62,6 @@ export class BodyComponent implements OnInit {
     private fb: FormBuilder,
     private _snackBar: MatSnackBar,
     private router: Router) {
-    // this.usersData.allUsers('').subscribe((data) => {
-    //   console.log(data)
-    //   this.dataOfUsers = data;
-    // });
 
     this.updateUserFormValue = this.fb.group({
       user_id: [''],
@@ -75,9 +75,6 @@ export class BodyComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchData();
-    // this.usersData.getAllUsers().subscribe((result: any) => {
-    //   this.users = result.users;
-    // });
   }
 
   // Search Bar
@@ -145,7 +142,7 @@ export class BodyComponent implements OnInit {
 
     }
   }
-  
+
 
   uncheckHeadCheckbox() {
     // uncheck head checkbox now

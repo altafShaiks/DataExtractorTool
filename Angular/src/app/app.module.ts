@@ -26,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { PaginatorComponent } from './MyComponents/paginator/paginator.component';
 
 
 
@@ -35,7 +36,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     LeftSideBarComponent,
     BodyComponent,
     UserDetailsPageComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,

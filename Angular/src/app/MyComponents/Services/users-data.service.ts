@@ -7,7 +7,7 @@ import { UserDataInterface } from '../Interfaces/user-data-interface';
   providedIn: 'root'
 })
 export class UsersDataService {
-  url = 'http://172.23.16.1:6363/api/userdata';
+  url = 'http://172.22.176.1:6363/api/userdata';
 
   constructor(private http: HttpClient) { }
   getAllUsers(): Observable<UserDataInterface[]> {
